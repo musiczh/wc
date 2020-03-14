@@ -1,0 +1,22 @@
+                    System.out.println("Sorry.An IOException has happened");
+                    }
+                    return;
+
+                case "-w":
+                    try {
+                        System.out.println("Words num: "+countWorker.getWordsCount()+"\n");
+                    } catch (IOException e) {
+                        System.out.println("Sorry.An IOException has happened");
+                    }
+                    return;
+
+                case "-l":
+                    try {
+                        System.out.println("Lines num: "+countWorker.getLinesCount()+"\n");
+                    } catch (IOException e) {
+                        System.out.println("Sorry.An IOException has happened");
+                    }
+                    return;
+
+                default:
+                    System.out.println("the command\""+args[0]+ "\"is invalid");

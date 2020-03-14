@@ -1,0 +1,23 @@
+/**
+     * 获取单词个数方法
+     * @return int 单词个数
+     * @throws IOException 读取文件过程中可能发生阻塞
+     */
+    @Override
+    public int getWordsCount() throws IOException {
+        int wordsNum = 0;
+        String str;
+        while (( str = mBufferedReader.readLine())!=null){
+            Pattern pattern = Pattern.compile("\\b[a-zA-Z]+\\b");
+            Matcher matcher = pattern.matcher(str);
+            while (matcher.find()) wordsNum++;
+        }
+        return wordsNum;
+    }
+
+    /**
+     * 统计可显示字符个数
+     * @return int 字符个数
+     * @throws IOException 读取流过程中可能会发生阻塞
+     */
+    @Override
